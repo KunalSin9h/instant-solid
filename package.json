@@ -10,6 +10,7 @@
     "build": "vite build && tsc --emitDeclarationOnly"
   },
   "dependencies": {
+    "@instantdb/core": "^0.12.14",
     "solid-js": "^1.8.20"
   },
   "devDependencies": {
@@ -19,4 +20,3 @@
     "vite-plugin-solid": "^2.10.2"
   }
 }
-
