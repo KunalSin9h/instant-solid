@@ -1,0 +1,22 @@
+{
+  "name": "instant-solid",
+  "version": "0.1.0-alpha",
+  "description": "InstantDB Solid.js SDK",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "vite build && tsc --emitDeclarationOnly"
+  },
+  "dependencies": {
+    "solid-js": "^1.8.20"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.2",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.1",
+    "vite-plugin-solid": "^2.10.2"
+  }
+}
+
