@@ -1,6 +1,6 @@
 {
   "name": "instant-solid",
-  "version": "0.1.0-alpha",
+  "version": "0.0.1-development",
   "description": "InstantDB Solid.js SDK",
   "author": "Kunal Singh",
   "license": "Apache-2.0",
