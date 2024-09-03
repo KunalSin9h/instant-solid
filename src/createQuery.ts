@@ -19,10 +19,11 @@ export function createQuery<Q extends Query, Schema>(
   _query: Exactly<Query, Q> | null,
 ): {
   state: LifecycleSubscriptionState<Q, Schema>;
-  query: any
+  query: any;
 } {
   // We use a solid's store to store the result to prevent unnecessary re-renders.
-  const [resultCacheRef, setResultCacheRef] = createSignal<LifecycleSubscriptionState<Q, Schema>>(defaultState);
+  const [resultCacheRef, setResultCacheRef] =
+    createSignal<LifecycleSubscriptionState<Q, Schema>>(defaultState);
 
   const query = _query ? coerceQuery(_query) : null;
 
@@ -50,4 +51,3 @@ export function createQuery<Q extends Query, Schema>(
     query,
   };
 }
-

@@ -1,7 +1,4 @@
-import type {
-  Config,
-  RoomSchemaShape,
-} from "@instantdb/core";
+import type { Config, RoomSchemaShape } from "@instantdb/core";
 import { InstantSolidWeb } from "./InstantSolidWeb";
 
 /**
@@ -29,4 +26,3 @@ export function init<Schema = {}, RoomSchema extends RoomSchemaShape = {}>(
 ) {
   return new InstantSolidWeb<Schema, RoomSchema>(config);
 }
-

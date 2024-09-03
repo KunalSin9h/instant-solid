@@ -18,4 +18,3 @@ export function createTimeout() {
 
   return { set, clear };
 }
-

@@ -1,17 +1,13 @@
-import {
-    id,
-    tx,
-    lookup,
-} from "@instantdb/core";
+import { id, tx, lookup } from "@instantdb/core";
 
 import type {
-    QueryResponse,
-    InstantObject,
-    User,
-    AuthState,
-    Query,
-    Config,
-    i,
+  QueryResponse,
+  InstantObject,
+  User,
+  AuthState,
+  Query,
+  Config,
+  i,
 } from "@instantdb/core";
 
 import { InstantSolid } from "./InstantSolid";
@@ -20,23 +16,22 @@ import { init } from "./init";
 import { Cursors } from "./Cursors";
 
 export {
-    id,
-    tx,
-    lookup,
-    init,
-    InstantSolidWeb,
-    Cursors,
+  id,
+  tx,
+  lookup,
+  init,
+  InstantSolidWeb,
+  Cursors,
 
-    // Initial
-    InstantSolid,
+  // Initial
+  InstantSolid,
 
-    // types
-    Config,
-    Query,
-    QueryResponse,
-    InstantObject,
-    User,
-    AuthState,
-    i,
-}
-
+  // types
+  Config,
+  Query,
+  QueryResponse,
+  InstantObject,
+  User,
+  AuthState,
+  i,
+};

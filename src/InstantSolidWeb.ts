@@ -5,4 +5,3 @@ export class InstantSolidWeb<
   Schema = {},
   RoomSchema extends RoomSchemaShape = {},
 > extends InstantSolid<Schema, RoomSchema> {}
-
