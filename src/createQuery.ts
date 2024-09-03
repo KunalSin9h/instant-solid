@@ -14,7 +14,7 @@ const defaultState = {
   error: undefined,
 };
 
-export function useQuery<Q extends Query, Schema>(
+export function createQuery<Q extends Query, Schema>(
   _core: InstantClient<Schema>,
   _query: Exactly<Query, Q> | null,
 ): {

@@ -1,6 +1,6 @@
 import { createEffect, createSignal } from "solid-js";
 
-export function useTimeout() {
+export function createTimeout() {
   const [timeoutRef, setTimeoutRef] = createSignal<NodeJS.Timeout | null>(null);
 
   createEffect(() => {
