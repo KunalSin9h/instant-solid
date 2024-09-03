@@ -6,11 +6,10 @@
   "license": "Apache-2.0",
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
-  "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
     "format": "prettier --write .",
-    "build": "vite build && tsc --emitDeclarationOnly --outFile dist/index.d.ts"
+    "build": "vite build"
   },
   "dependencies": {
     "@instantdb/core": "^0.12.14",
