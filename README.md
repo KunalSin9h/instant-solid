@@ -1,5 +1,8 @@
 ## instant-solid
 
+> [!CAUTION]
+> This is not yet tested.
+
 #### Usage
 
 ```bash
