@@ -1,7 +1,7 @@
 ## instant-solid
 
 > [!CAUTION]
-> This is not yet tested.
+> This is not ready to be used.
 
 #### Usage
 
