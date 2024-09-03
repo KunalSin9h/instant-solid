@@ -7,7 +7,7 @@
   "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
-    "build": "vite build && tsc --emitDeclarationOnly"
+    "build": "vite build && tsc --emitDeclarationOnly --outFile dist/index.d.ts"
   },
   "dependencies": {
     "@instantdb/core": "^0.12.14",

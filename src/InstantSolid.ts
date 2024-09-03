@@ -1,7 +1,8 @@
 import { createSignal, createEffect, createMemo, onCleanup } from "solid-js";
 import {
     init as initCore,
-
+} from "@instantdb/core";
+import type {
     // types
     Config,
     Query,

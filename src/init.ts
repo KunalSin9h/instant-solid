@@ -1,4 +1,4 @@
-import {
+import type {
   Config,
   RoomSchemaShape,
 } from "@instantdb/core";
