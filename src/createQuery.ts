@@ -1,10 +1,12 @@
-import { createEffect, createSignal, onCleanup } from "solid-js";
+import { createEffect, onCleanup } from "solid-js";
+import { createStore } from "solid-js/store";
 import {
   coerceQuery,
   Query,
   Exactly,
   InstantClient,
   LifecycleSubscriptionState,
+  weakHash,
 } from "@instantdb/core";
 
 const defaultState = {
@@ -21,20 +23,20 @@ export function createQuery<Q extends Query, Schema>(
   state: LifecycleSubscriptionState<Q, Schema>;
   query: any;
 } {
-  // We use a solid's store to store the result to prevent unnecessary re-renders.
-  const [resultCacheRef, setResultCacheRef] =
-    createSignal<LifecycleSubscriptionState<Q, Schema>>(defaultState);
-
   const query = _query ? coerceQuery(_query) : null;
+  const queryHash = weakHash(query);
+
+  const [result, setResult] =
+    createStore<LifecycleSubscriptionState<Q, Schema>>(defaultState);
 
   createEffect(() => {
     if (!query) {
-      setResultCacheRef(defaultState);
-      return () => {};
+      setResult(defaultState);
+      return;
     }
 
     const unsubscribe = _core.subscribeQuery<Q>(query, (result) => {
-      setResultCacheRef({
+      setResult({
         isLoading: !Boolean(result),
         data: undefined,
         pageInfo: undefined,
@@ -44,10 +46,10 @@ export function createQuery<Q extends Query, Schema>(
     });
 
     onCleanup(() => unsubscribe());
-  });
+  }, [queryHash]);
 
   return {
-    state: resultCacheRef(),
+    state: result,
     query,
   };
 }
