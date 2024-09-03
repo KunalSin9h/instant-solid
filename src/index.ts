@@ -17,6 +17,7 @@ import type {
 import { InstantSolid } from "./InstantSolid";
 import { InstantSolidWeb } from "./InstantSolidWeb";
 import { init } from "./init";
+import { Cursors } from "./Cursors";
 
 export {
     id,
@@ -24,7 +25,7 @@ export {
     lookup,
     init,
     InstantSolidWeb,
-    // Cursor
+    Cursors,
 
     // Initial
     InstantSolid,
